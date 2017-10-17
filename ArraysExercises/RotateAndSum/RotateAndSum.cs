@@ -10,8 +10,8 @@ namespace RotateAndSum
     {
         static void Main(string[] args)
         {
-            int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            int rotations = int.Parse(Console.ReadLine());
+            long[] array = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
+            long rotations = long.Parse(Console.ReadLine());
         
             array = ArrayRotator.RotateAndSum(array, rotations);
             array.PrintArray();
@@ -19,14 +19,14 @@ namespace RotateAndSum
     }
     public static class ArrayRotator
     {
-        public static int[] RotateAndSum(int[] array, int count)
+        public static long[] RotateAndSum(long[] array, long count)
         {
-            int[] sumArray = new int[array.Length];
+            long[] sumArray = new long[array.Length];
 
-            for (int a = 0; a < count; a++)
+            for (long a = 0; a < count; a++)
             {
                 array.RotateArray(1);
-                for (int i = 0; i < array.Length; i++)
+                for (long i = 0; i < array.Length; i++)
                 {
                     sumArray[i] += array[i];
                 }
@@ -34,16 +34,16 @@ namespace RotateAndSum
             return sumArray;
         }
 
-        public static void RotateArray<T>(this T[] array, int count)
+        public static void RotateArray<T>(this T[] array, long count)
         {
             if (array == null || array.Length < 2) return;
             count %= array.Length;
             if (count == 0) return;
-            int left = count < 0 ? -count : array.Length + count;
-            int right = count > 0 ? count : array.Length - count;
+            long left = count < 0 ? -count : array.Length + count;
+            long right = count > 0 ? count : array.Length - count;
             if (left <= right)
             {
-                for (int i = 0; i < left; i++)
+                for (long i = 0; i < left; i++)
                 {
                     var temp = array[0];
                     Array.Copy(array, 1, array, 0, array.Length - 1);
@@ -52,7 +52,7 @@ namespace RotateAndSum
             }
             else
             {
-                for (int i = 0; i < right; i++)
+                for (long i = 0; i < right; i++)
                 {
                     var temp = array[array.Length - 1];
                     Array.Copy(array, 0, array, 1, array.Length - 1);
@@ -70,9 +70,9 @@ namespace RotateAndSum
             Console.WriteLine();
         }
 
-        public static void SumArrays(this int[] array, int[] arrayToAdd)
+        public static void SumArrays(this long[] array, long[] arrayToAdd)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (long i = 0; i < array.Length; i++)
             {
                 array[i] += arrayToAdd[i];
             }
