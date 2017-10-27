@@ -8,9 +8,10 @@ namespace AMinerTask
     {
         static void Main(string[] args)
         {
-            string outputPath = @"..\..\..\Output\output_5.txt";
+            string outputPath = @"..\..\output.txt";
             File.Delete(outputPath);
-            string [] input = File.ReadAllLines("input.txt");
+
+            string [] input = File.ReadAllLines(@"..\..\input.txt");
 
             var dictionary = new Dictionary<string, int>();
             int value;

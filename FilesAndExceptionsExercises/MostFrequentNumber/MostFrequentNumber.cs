@@ -11,9 +11,12 @@ namespace MostFrequentNumber
     {
         static void Main(string[] args)
         {
-            File.Delete(@"..\..\..\Output\output_1.txt");
+            File.Delete(@"..\..\output.txt");
 
-            int[] input = File.ReadAllText("input.txt").Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x)).ToArray();
+            int[] input = File.ReadAllText(@"..\..\input.txt")
+                .Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => int.Parse(x))
+                .ToArray(); 
                 
             Dictionary<int, int> nums = new Dictionary<int, int>();
 
@@ -29,7 +32,7 @@ namespace MostFrequentNumber
                 }
             }
 
-            File.WriteAllText(@"..\..\..\Output\output_1.txt", nums.First(x => x.Value == nums.Values.Max()).Key.ToString());
+            File.WriteAllText(@"..\..\output.txt", nums.First(x => x.Value == nums.Values.Max()).Key.ToString());
         }
     }
 }

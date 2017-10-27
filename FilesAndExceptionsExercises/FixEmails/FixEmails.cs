@@ -11,8 +11,8 @@ namespace FixEmails
     {
         static void Main(string[] args)
         {
-            File.Delete(@"..\..\..\Output\output_6.txt");
-            string[] inputLines = File.ReadAllLines("input.txt");
+            File.Delete(@"..\..\output.txt");
+            string[] inputLines = File.ReadAllLines(@"..\..\input.txt");
 
             for (int i = 0; i < inputLines.Length; i += 2)
             {
@@ -29,7 +29,7 @@ namespace FixEmails
                     continue;
                 }
                 var output = $"{name } -> {email}" + Environment.NewLine;
-                File.AppendAllText(@"..\..\..\Output\output_6.txt", output);
+                File.AppendAllText(@"..\..\output.txt", output);
 
             }
         }

@@ -11,10 +11,10 @@ namespace EqualSums
     {
         static void Main(string[] args)
         {
-            string outputPath = @"..\..\..\Output\output_3.txt";
+            string outputPath = @"..\..\output.txt";
             File.Delete(outputPath);
 
-            int[] array = File.ReadAllText("input.txt").Split(' ').Select(int.Parse).ToArray();
+            int[] array = File.ReadAllText(@"..\..\input.txt").Split(' ').Select(int.Parse).ToArray();
 
             if (array.Length == 1)
             {

@@ -11,14 +11,14 @@ namespace IndexOfLetters
     {
         static void Main(string[] args)
         {
-            File.Delete(@"..\..\..\Output\output_2.txt");
+            File.Delete(@"..\..\output.txt");
 
             List<char> lettersLowerCase = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (Char)i).ToList();
-            char [] input = File.ReadAllText("input.txt").ToCharArray();
+            char[] input = File.ReadAllText(@"..\..\input.txt").ToCharArray();
 
             foreach (var letter in input)
             {
-               File.AppendAllText(@"..\..\..\Output\output_2.txt", $"{letter} -> {lettersLowerCase.FindIndex(l=>l==letter)}"+Environment.NewLine);
+                File.AppendAllText(@"..\..\output.txt", $"{ letter} -> {lettersLowerCase.FindIndex(l => l == letter)}" + Environment.NewLine);
             }
         }
     }

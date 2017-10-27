@@ -11,10 +11,10 @@ namespace MaxSequenceOfEqualElements
     {
         static void Main(string[] args)
         {
-            string outputPath = @"..\..\..\Output\output_4.txt";
+            string outputPath = @"..\..\output.txt";
             File.Delete(outputPath);
 
-            int[] array = File.ReadAllText("input.txt").Split(' ').Select(int.Parse).ToArray();
+            int[] array = File.ReadAllText(@"..\..\input.txt").Split(' ').Select(int.Parse).ToArray();
             int start = 0, len = 1, bestStart = 0, bestLen = 1;
 
             for (int position = 1; position < array.Length; position++)
