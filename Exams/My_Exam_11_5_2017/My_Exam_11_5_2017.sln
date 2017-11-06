@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_1", "Task_1\Task_1.csproj", "{3F4BC43A-CAC8-4E1A-81D5-5CC18A0E85AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymous_Downsite", "Task_1\Anonymous_Downsite.csproj", "{3F4BC43A-CAC8-4E1A-81D5-5CC18A0E85AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_2", "Task_2\Task_2.csproj", "{8CB97A1B-E293-441B-BE9E-6ADFDDA1B20C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymous_Threat", "Task_2\Anonymous_Threat.csproj", "{8CB97A1B-E293-441B-BE9E-6ADFDDA1B20C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_3", "Task_3\Task_3.csproj", "{CCAEBECB-B1CA-4AD0-AA7C-1172713D9FD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymous_Vox", "Task_3\Anonymous_Vox.csproj", "{CCAEBECB-B1CA-4AD0-AA7C-1172713D9FD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_4", "Task_4\Task_4.csproj", "{CD1CE053-0D56-4AC0-8CEF-BDCED7688CA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymous_Cache", "Task_4\Anonymous_Cache.csproj", "{CD1CE053-0D56-4AC0-8CEF-BDCED7688CA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

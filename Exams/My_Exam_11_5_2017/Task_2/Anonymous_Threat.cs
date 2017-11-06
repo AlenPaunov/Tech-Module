@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_2
 {
-    class Program
+    class Anonymous_Threat
     {
         static void Main(string[] args)
         {
-
             List<string> list = Console.ReadLine().Split(' ').ToList();
-
-
             string line = Console.ReadLine();
+
             while (line != "3:1")
             {
                 string[] tokens = line.Split(' ');
@@ -25,15 +22,16 @@ namespace Task_2
                         int startIndex = int.Parse(tokens[1]);
                         int endIndex = int.Parse(tokens[2]);
 
-
                         if (startIndex < 0)
                         {
                             startIndex = 0;
                         }
+
                         if (endIndex >= list.Count())
                         {
                             endIndex = list.Count() - 1;
                         }
+
                         if (startIndex < list.Count)
                         {
                             StringBuilder builder = new StringBuilder();
@@ -49,12 +47,9 @@ namespace Task_2
                                 list.RemoveAt(startIndex + 1);
                             }
                         }
-
                         break;
 
-
                     case "divide":
-
                         int index = int.Parse(tokens[1]);
                         int parts = int.Parse(tokens[2]);
 
@@ -85,9 +80,9 @@ namespace Task_2
                             {
                                 result2.Add(spllited[i]);
                             }
-                          
 
-                            for (int i = index+1; i < list.Count; i++)
+
+                            for (int i = index + 1; i < list.Count; i++)
                             {
                                 result2.Add(list[i]);
                             }
@@ -105,7 +100,7 @@ namespace Task_2
                             if (word.Length % parts == 0)
                             {
                                 var add = "";
-                                for (int i = 0; i < word.Length % parts-1; i++)
+                                for (int i = 0; i < word.Length % parts - 1; i++)
                                 {
                                     add = new string(word.Take(word.Length / parts).ToArray());
                                     word = new string(word.Skip(word.Length / parts).ToArray());
