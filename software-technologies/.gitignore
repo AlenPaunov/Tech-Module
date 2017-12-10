@@ -1,5 +1,7 @@
 node_modules/
-
+mysql/
+HeidiSQL_9.4_Portable/
+.idea/
 
 app/config/parameters.yml
 build/
