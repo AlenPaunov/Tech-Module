@@ -2,6 +2,7 @@ node_modules/
 mysql/
 HeidiSQL_9.4_Portable/
 .idea/
+mysql_start.bat
 
 app/config/parameters.yml
 build/
