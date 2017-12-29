@@ -1,11 +1,3 @@
-node_modules/
-mysql/
-HeidiSQL_9.4_Portable/
-.idea/
-*.zip
-mysql_start.bat
-mysql_stop.bat
-
 app/config/parameters.yml
 build/
 phpunit.xml
