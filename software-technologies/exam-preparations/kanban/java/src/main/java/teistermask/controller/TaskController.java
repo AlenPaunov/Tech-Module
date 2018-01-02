@@ -68,4 +68,20 @@ public class TaskController {
 		this.taskRepository.saveAndFlush(task);
 		return "redirect:/";
 	}
+
+	@GetMapping("/delete/{id}")
+	public String delete (Model model, @PathVariable int id) {
+		Task task = taskRepository.findOne(id);
+		model.addAttribute("task",task);
+		model.addAttribute("view", "/task/delete");
+		return "base-layout";
+	}
+
+	@PostMapping("/delete/{id}")
+	public String deleteProcess(Model model, @PathVariable int id) {
+		Task task = taskRepository.findOne(id);
+
+		taskRepository.delete(task);
+		return "redirect:/";
+	}
 }
